@@ -12,23 +12,21 @@
 Sensor leftSoundSensor;
 Sensor rightSoundSensor;
 
-int leftSignal[] = int[100];
-int rightSignal[] = int[100];
+int leftSignal[100];
+int rightSignal[100];
 
-DirectionSensor::DirectionSensor(PinMapper leftSensor, PinMapper rightSensor) {
-    leftSoundSensor = Sensor(leftSensor);
-    rightSoundSensor = Sensor(rightSensor);
+DirectionSensor::DirectionSensor(PinMapper leftSensorPin, PinMapper rightSensorPin) {
 }
 
 DirectionSensor::~DirectionSensor() {
 }
 
-DirectionSensor::update() {
+void DirectionSensor::update() {
     leftSoundSensor.read();
     rightSoundSensor.read();
 }
 
-DirectionSensor::read() {
+int DirectionSensor::read() {
     
 }
 

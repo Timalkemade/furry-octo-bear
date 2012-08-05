@@ -13,6 +13,9 @@ Sensor::Sensor(PinMapper aPinMapper) {
     pinMapper = aPinMapper;
 }
 
+Sensor::Sensor() {
+}
+
 Sensor::~Sensor() {
 }
 

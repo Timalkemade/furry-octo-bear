@@ -5,12 +5,7 @@
  * Created on 4 augustus 2012, 13:02
  */
 
-#include "WrappingArray.h"
-
-const unsigned int size = 1024;
-int values[] = int[size];
-int pointer = 0;
-bool full = false;
+#include "WrappingArray.hpp"
 
 WrappingArray::WrappingArray() {
 }
@@ -19,25 +14,26 @@ WrappingArray::~WrappingArray() {
 }
 
 unsigned int WrappingArray::size() {
-    return size;
+    return arraySize;
 }
 
 void WrappingArray::writeNext(int value) {
-    values[pointer] = value;
-    pointer++;
-    if(pointer == size) {
-        pointer = 0;
-        full = true;
+    values[nextValuePointer] = value;
+    nextValuePointer++;
+    if(arraySize < maxSize) {
+        arraySize++;
+    }
+    if(nextValuePointer == maxSize) {
+        nextValuePointer = 0;
     }
 }
 
-WrappingArrayIterator WrappingArray::initIterator(WrappingArrayIterator iterator) {
-    iterator.init(pointer, size, array);
+void WrappingArray::initIterator(WrappingArrayIterator& iterator) {
+    iterator.init(nextValuePointer, arraySize, maxSize, values);
 }
 
-bool isFull() {
-    return full;
+bool WrappingArray::isFull() {
+    return arraySize == maxSize;
 }
-
 
 

@@ -13,11 +13,19 @@ public:
     WrappingArrayIterator();
     virtual ~WrappingArrayIterator();
     
-    void init(int aStart, int aSize, int *anArray);
+    void init(int start, int arraySize, int maxSize, int *array);
     bool hasNext();
-    bool next();
+    int next();
 private:
+    int start;
+    int arraySize;
+    int maxSize;    
+    int *array;
 
+    int nextValuePointer;
+    bool isFirst;
+
+    bool isFull();
 };
 
 #endif	/* WRAPPINGARRAYITERATOR_H */

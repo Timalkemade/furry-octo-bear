@@ -1,8 +1,10 @@
+
 #ifndef LEFT_WHEEL_H
 #define LEFT_WHEEL_H
 
 #include "Wheel.h"
-#include <Servo.h>
+#include "WProgram.h"
+#include "Servo.h"
 #include "PinMapper.h"
 class LeftWheel : public Wheel { 
 

@@ -8,10 +8,13 @@
 #ifndef DIRECTIONSENSOR_H
 #define	DIRECTIONSENSOR_H
 
+#include "PinMapper.h"
+
+
 class DirectionSensor {
 public:
-    DirectionSensor();
-    virtual ~DirectionSensor();
+    DirectionSensor(PinMapper leftSensorPin, PinMapper rightSensorPin);
+    ~DirectionSensor();
     
     void update();
     int read();

@@ -14,6 +14,7 @@
 class Sensor {
 public:
     Sensor(PinMapper pinMapper);
+    Sensor();
     int read();
     virtual ~Sensor();
 private:

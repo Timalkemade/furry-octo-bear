@@ -4,17 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>DirectionSensor.h</itemPath>
-      <itemPath>DrivingController.h</itemPath>
-      <itemPath>LeftWheel.h</itemPath>
-      <itemPath>PinMapper.h</itemPath>
-      <itemPath>RightWheel.h</itemPath>
-      <itemPath>Sensor.h</itemPath>
-      <itemPath>Timer.h</itemPath>
-      <itemPath>Wheel.h</itemPath>
-      <itemPath>WrappingArray.h</itemPath>
-      <itemPath>WrappingArrayIterator.h</itemPath>
-      <itemPath>fix_fft.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/DirectionSensor.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/DrivingController.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/LeftWheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/PinMapper.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/RightWheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/Sensor.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/Timer.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/Wheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/WrappingArray.hpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/WrappingArrayIterator.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -23,27 +22,20 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>DirectionSensor.cpp</itemPath>
-      <itemPath>DrivingController.cpp</itemPath>
-      <itemPath>LeftWheel.cpp</itemPath>
-      <itemPath>RightWheel.cpp</itemPath>
-      <itemPath>Sensor.cpp</itemPath>
-      <itemPath>Timer.cpp</itemPath>
-      <itemPath>WrappingArray.cpp</itemPath>
-      <itemPath>WrappingArrayIterator.cpp</itemPath>
-      <itemPath>drive.pde</itemPath>
-      <itemPath>fix_fft.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/DirectionSensor.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/DrivingController.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/LeftWheel.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/RightWheel.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/Sensor.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/Timer.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/WrappingArray.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/WrappingArrayIterator.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive1/drive.pde</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
-      <logicalFolder name="f1"
-                     displayName="WrappingArrayTest"
-                     projectFiles="true"
-                     kind="TEST">
-        <itemPath>tests/newsimpletest.cpp</itemPath>
-      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -52,60 +44,37 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>.</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>default</compilerSet>
+        <compilerSet>PIC32|GNU</compilerSet>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32</pElem>
+            <pElem>/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32</pElem>
+            <pElem>/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32</pElem>
+            <pElem>/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/libraries/Servo</pElem>
+          </incDir>
+          <commandLine>-O2 -c -mno-smart-io -w -fno-exceptions -ffunction-sections -fdata-sections -mprocessor=32MX320F128H -DF_CPU=80000000L -D_BOARD_UNO_</commandLine>
+        </ccTool>
+        <linkerTool>
+          <commandLine>-Wl,--gc-sections -mprocessor=32MX320F128H</commandLine>
+        </linkerTool>
       </compileType>
-      <folder path="TestFiles/f1">
-        <cTool>
-          <incDir>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
-          </incDir>
-        </cTool>
-        <ccTool>
-          <incDir>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
-          </incDir>
-        </ccTool>
-        <linkerTool>
-          <output>${TESTDIR}/TestFiles/f1</output>
-        </linkerTool>
-      </folder>
-      <folder path="TestFiles/f2">
-        <cTool>
-          <incDir>
-            <pElem>.</pElem>
-          </incDir>
-        </cTool>
-        <ccTool>
-          <incDir>
-            <pElem>.</pElem>
-          </incDir>
-        </ccTool>
-        <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
-          <linkerLibItems>
-            <linkerLibStdlibItem>CppUnit</linkerLibStdlibItem>
-          </linkerLibItems>
-        </linkerTool>
-      </folder>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>default</compilerSet>
+        <compilerSet>PIC32|GNU</compilerSet>
       </toolsSet>
       <compileType>
         <cTool>

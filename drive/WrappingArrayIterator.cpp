@@ -5,13 +5,8 @@
  * Created on 4 augustus 2012, 13:08
  */
 
-#include "WrappingArrayIterator.h"
+#include "WrappingArrayIterator.hpp"
 
-unsigned int pointer;
-const unsigned int start;
-const unsigned int size;
-bool isFirst = true;
-int *array;
 
 WrappingArrayIterator::WrappingArrayIterator() {
 }
@@ -19,24 +14,37 @@ WrappingArrayIterator::WrappingArrayIterator() {
 WrappingArrayIterator::~WrappingArrayIterator() {
 }
 
-void WrappingArrayIterator::init(int aStart, int aSize, int *anArray) {
+void WrappingArrayIterator::init(int aStart, int aSize, int theMaxSize, int *anArray) {
     start = aStart;
-    pointer = aStart;
-    size = aSize;
+    arraySize = aSize;
+    maxSize = theMaxSize;
     array = anArray;
+    isFirst = true;
+    if(isFull()) {
+        nextValuePointer = aStart;        
+    } else {
+        nextValuePointer = 0;
+    }
+    
 }
 
 bool WrappingArrayIterator::hasNext() {
     // if array is full
-    return pointer != start || (isFirst && size != 0);
+    return nextValuePointer != start || (isFirst && arraySize != 0);
 }
 
 int WrappingArrayIterator::next() {
     isFirst = false;
-    int value = array[pointer];
-    pointer++;
-    if(pointer == size) {
-        pointer = 0;
+    int value = array[nextValuePointer];
+    nextValuePointer++;
+    if(nextValuePointer == maxSize) {
+        nextValuePointer = 0;
     }
     return value;
 }
+
+bool WrappingArrayIterator::isFull() {
+    return maxSize == arraySize;
+}
+
+

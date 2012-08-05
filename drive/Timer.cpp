@@ -18,7 +18,7 @@ Timer::Timer(unsigned long duration) {
 Timer::~Timer() {
 }
 
-Timer::hasEnded() {
+bool Timer::hasEnded() {
     return millis() > endTime;
 }
 
