@@ -4,16 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>/home/tim/code/arduino/drive1/DirectionSensor.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/DrivingController.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/LeftWheel.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/PinMapper.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/RightWheel.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/Sensor.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/Timer.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/Wheel.h</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/WrappingArray.hpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/WrappingArrayIterator.hpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/DirectionSensor.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/DrivingController.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/LeftWheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/PinMapper.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/RightWheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/Sensor.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/Timer.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/Wheel.h</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/WrappingArray.hpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/WrappingArrayIterator.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -22,15 +22,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>/home/tim/code/arduino/drive1/DirectionSensor.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/DrivingController.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/LeftWheel.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/RightWheel.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/Sensor.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/Timer.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/WrappingArray.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/WrappingArrayIterator.cpp</itemPath>
-      <itemPath>/home/tim/code/arduino/drive1/drive.pde</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/DirectionSensor.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/DrivingController.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/LeftWheel.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/RightWheel.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/Sensor.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/Timer.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/WrappingArray.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/WrappingArrayIterator.cpp</itemPath>
+      <itemPath>/home/tim/code/arduino/drive/drive.pde</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
