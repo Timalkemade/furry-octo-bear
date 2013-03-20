@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2095499449/RightWheel.o \
 	${OBJECTDIR}/_ext/2095499449/Timer.o \
 	${OBJECTDIR}/_ext/2095499449/DrivingController.o \
+	${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o \
 	${OBJECTDIR}/_ext/2095499449/LeftWheel.o \
 	${OBJECTDIR}/_ext/2095499449/drive.o \
 	${OBJECTDIR}/_ext/2095499449/WrappingArrayIterator.o \
@@ -94,6 +95,11 @@ ${OBJECTDIR}/_ext/2095499449/DrivingController.o: /home/tim/code/arduino/drive/D
 	${RM} $@.d
 	$(COMPILE.cc) -g -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/libraries/Servo -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/DrivingController.o /home/tim/code/arduino/drive/DrivingController.cpp
 
+${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o: /home/tim/code/arduino/drive/CrossCorrelation.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449
+	${RM} $@.d
+	$(COMPILE.cc) -g -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/libraries/Servo -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o /home/tim/code/arduino/drive/CrossCorrelation.cpp
+
 ${OBJECTDIR}/_ext/2095499449/LeftWheel.o: /home/tim/code/arduino/drive/LeftWheel.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449
 	${RM} $@.d
@@ -102,7 +108,7 @@ ${OBJECTDIR}/_ext/2095499449/LeftWheel.o: /home/tim/code/arduino/drive/LeftWheel
 ${OBJECTDIR}/_ext/2095499449/drive.o: /home/tim/code/arduino/drive/drive.pde 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449
 	${RM} $@.d
-	$(COMPILE.c) -g -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/drive.o /home/tim/code/arduino/drive/drive.pde
+	$(COMPILE.cc) -g -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/cores/pic32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/variants/Uno32 -I/home/tim/programs/mpide-0023-linux32-20111221/hardware/pic32/libraries/Servo -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/drive.o /home/tim/code/arduino/drive/drive.pde
 
 ${OBJECTDIR}/_ext/2095499449/WrappingArrayIterator.o: /home/tim/code/arduino/drive/WrappingArrayIterator.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449

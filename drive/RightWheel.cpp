@@ -4,7 +4,7 @@ RightWheel::RightWheel() {
 
 }
 
-RightWheel::RightWheel(PinMapper pinMapper, int aStopAngle) {
+RightWheel::RightWheel(Pin pinMapper, int aStopAngle) {
   RightWheel::opposite = LeftWheel(pinMapper, aStopAngle);
 }
 

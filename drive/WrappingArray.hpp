@@ -8,21 +8,19 @@
 #ifndef WRAPPINGARRAY_H
 #define	WRAPPINGARRAY_H
 
-#include "WrappingArrayIterator.hpp"
-
 class WrappingArray {
 public:
     WrappingArray();
     virtual ~WrappingArray();
-    
+
     unsigned int size();
     void writeNext(int value);
-    
-    void initIterator(WrappingArrayIterator& iterator);
-private:
+    int get(int index);
     bool isFull();
+private:
+
     unsigned int maxSize;
-    int values[1024];
+    int values[100];
     int nextValuePointer;
     int arraySize;
 

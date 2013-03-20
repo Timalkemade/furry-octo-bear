@@ -9,7 +9,7 @@
 #include "DrivingController.h"
 #include "RightWheel.h"
 #include "LeftWheel.h"
-#include "PinMapper.h"
+#include "Pin.h"
 #include "Sensor.h"
 
 LeftWheel leftWheel = LeftWheel(LEFT_WHEEL, 94);

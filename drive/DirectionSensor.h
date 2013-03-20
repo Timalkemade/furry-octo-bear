@@ -8,18 +8,43 @@
 #ifndef DIRECTIONSENSOR_H
 #define	DIRECTIONSENSOR_H
 
-#include "PinMapper.h"
-
+#include "Pin.h"
+#include "WrappingArray.hpp"
+#include "Sensor.h"
+#include "CrossCorrelation.h"
 
 class DirectionSensor {
 public:
-    DirectionSensor(PinMapper leftSensorPin, PinMapper rightSensorPin);
+    DirectionSensor(Pin leftSoundSensor, Pin rightSoundSensor, int pCompareLength);
     ~DirectionSensor();
-    
+
     void update();
     int read();
-private:
+    int minimizeCrossComparison(WrappingArray& left, WrappingArray& right);
 
+private:
+    Sensor leftSoundSensor;
+    Sensor rightSoundSensor;
+
+    WrappingArray leftSignal;
+    WrappingArray rightSignal;
+    CrossCorrelation cross;
+    int compareLength;
+    int correlation[100];
+
+    struct tuple {
+
+        tuple(int pIndex, int pValue) {
+            index = pIndex;
+            value = pValue;
+        }
+
+        int index;
+        int value;
+    };
+
+    tuple minElement(int elements[], int size);
+    tuple crossCompare(WrappingArray& firstSignal, WrappingArray& secondSignal);
 };
 
 #endif	/* DIRECTIONSENSOR_H */

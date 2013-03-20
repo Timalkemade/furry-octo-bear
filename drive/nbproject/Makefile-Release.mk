@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2095499449/RightWheel.o \
 	${OBJECTDIR}/_ext/2095499449/Timer.o \
 	${OBJECTDIR}/_ext/2095499449/DrivingController.o \
+	${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o \
 	${OBJECTDIR}/_ext/2095499449/LeftWheel.o \
 	${OBJECTDIR}/_ext/2095499449/drive.o \
 	${OBJECTDIR}/_ext/2095499449/WrappingArrayIterator.o \
@@ -93,6 +94,11 @@ ${OBJECTDIR}/_ext/2095499449/DrivingController.o: /home/tim/code/arduino/drive/D
 	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/DrivingController.o /home/tim/code/arduino/drive/DrivingController.cpp
+
+${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o: /home/tim/code/arduino/drive/CrossCorrelation.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2095499449/CrossCorrelation.o /home/tim/code/arduino/drive/CrossCorrelation.cpp
 
 ${OBJECTDIR}/_ext/2095499449/LeftWheel.o: /home/tim/code/arduino/drive/LeftWheel.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2095499449

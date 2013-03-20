@@ -3,7 +3,7 @@
 LeftWheel::LeftWheel(){
 }
 
-LeftWheel::LeftWheel(PinMapper pinMapper, int aStopAngle) {
+LeftWheel::LeftWheel(Pin pinMapper, int aStopAngle) {
     wheelServo.attach(pinMapper);
     stopAngle = aStopAngle;
     maxForwardAngle = 179;

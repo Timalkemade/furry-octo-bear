@@ -8,12 +8,12 @@
 #ifndef SENSOR_H
 #define	SENSOR_H
 
-#include "PinMapper.h"
+#include "Pin.h"
 #include <WProgram.h>
 
 class Sensor {
 public:
-    Sensor(PinMapper pinMapper);
+    Sensor(Pin pinMapper);
     Sensor();
     int read();
     virtual ~Sensor();

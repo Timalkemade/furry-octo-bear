@@ -7,9 +7,9 @@
 
 #include "Sensor.h"
 
-PinMapper pinMapper;
+Pin pinMapper;
 
-Sensor::Sensor(PinMapper aPinMapper) {
+Sensor::Sensor(Pin aPinMapper) {
     pinMapper = aPinMapper;
 }
 

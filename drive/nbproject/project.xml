@@ -4,10 +4,10 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>drive</name>
-            <c-extensions>pde</c-extensions>
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions>h,hpp</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
+            <c-extensions>pde</c-extensions>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
