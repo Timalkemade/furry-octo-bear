@@ -27,8 +27,6 @@ void setup() {
 }
 
 void loop() {
-
-
     int dt = direction.minimizeCrossComparison(leftSignal, rightSignal);
     Serial.print("dt");
     Serial.println(dt);
