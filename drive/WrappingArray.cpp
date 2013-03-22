@@ -7,9 +7,9 @@
 
 #include "WrappingArray.hpp"
 
-WrappingArray::WrappingArray() {
+WrappingArray::WrappingArray(unsigned short pMaxSize) {
     nextValuePointer = 0;
-    maxSize = 9;
+    maxSize = pMaxSize;
     arraySize = 0;
 
 }
@@ -17,11 +17,11 @@ WrappingArray::WrappingArray() {
 WrappingArray::~WrappingArray() {
 }
 
-unsigned int WrappingArray::size() {
+unsigned short WrappingArray::size() {
     return arraySize;
 }
 
-void WrappingArray::writeNext(int value) {
+void WrappingArray::writeNext(unsigned short value) {
     values[nextValuePointer] = value;
     nextValuePointer++;
     if (arraySize < maxSize) {
@@ -36,8 +36,8 @@ bool WrappingArray::isFull() {
     return arraySize == maxSize;
 }
 
-int WrappingArray::get(int index) {
-    int arrayStart = 0;
+unsigned short WrappingArray::get(unsigned short index) {
+    unsigned short arrayStart = 0;
     if (isFull()) {
         arrayStart = nextValuePointer;
     }

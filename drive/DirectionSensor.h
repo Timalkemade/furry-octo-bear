@@ -15,36 +15,38 @@
 
 class DirectionSensor {
 public:
-    DirectionSensor(Pin leftSoundSensor, Pin rightSoundSensor, int pCompareLength);
+    DirectionSensor(Pin leftSoundSensor, Pin rightSoundSensor, unsigned short pCompareLength, unsigned short pMaxSize);
     ~DirectionSensor();
 
     void update();
-    int read();
-    int minimizeCrossComparison(WrappingArray& left, WrappingArray& right);
+    void update(unsigned short leftValue, unsigned short rightValue);
+    float read();
+    float minimizeCrossComparison(WrappingArray& left, WrappingArray& right);
 
 private:
     Sensor leftSoundSensor;
     Sensor rightSoundSensor;
+    unsigned short maxSize;
 
     WrappingArray leftSignal;
     WrappingArray rightSignal;
     CrossCorrelation cross;
-    int compareLength;
-    int correlation[100];
+    unsigned int compareLength;
 
     struct tuple {
 
-        tuple(int pIndex, int pValue) {
+        tuple(unsigned int pIndex, unsigned int pValue) {
             index = pIndex;
             value = pValue;
         }
 
-        int index;
-        int value;
+        unsigned int index;
+        unsigned int value;
     };
 
-    tuple minElement(int elements[], int size);
+    tuple minElement(unsigned short elements[], unsigned int size);
     tuple crossCompare(WrappingArray& firstSignal, WrappingArray& secondSignal);
+    double timeDifferenceToAngle(double timeDifference);
 };
 
 #endif	/* DIRECTIONSENSOR_H */

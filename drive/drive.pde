@@ -8,60 +8,46 @@
 //DrivingController controller = DrivingController();
 //Sensor distanceSensor = Sensor(DISTANCE_SENSOR);
 
+int left = 0;
+int delta = 8;
 
-int phase = 0;
-long previousMillis = 0;
-CrossCorrelation cross;
-DirectionSensor direction = DirectionSensor(LEFT_SOUND_SENSOR, RIGHT_SOUND_SENSOR, 3);
-
-int offset = 0;
-int left = 9;
-WrappingArray leftSignal = WrappingArray();
-WrappingArray rightSignal = WrappingArray();
+DirectionSensor direction(LEFT_SOUND_SENSOR, RIGHT_SOUND_SENSOR, 3, 10);
 
 void setup() {
     Serial.begin(9600);
     Serial.println("setup done");
-    
-    fill(leftSignal, rightSignal);
+
+    fill(direction);
 }
 
 void loop() {
-    int dt = direction.minimizeCrossComparison(leftSignal, rightSignal);
-    Serial.print("dt");
-    Serial.println(dt);
+    Serial.println();
+    double angle = direction.read();
+    Serial.print("angle: ");
+    Serial.println(angle);
 
-    leftSignal.writeNext(left++);
+    direction.update(left++, 1025);
 
-    if (left > 26) {
+    if (left > 28) {
         Serial.println("reset");
-        fill(leftSignal, rightSignal);
-        left = 9;
+        left = 0;
+        fill(direction);
     }
 
     delay(2000);
 }
 
-void fill(WrappingArray& leftSignal, WrappingArray& rightSignal) {
-    leftSignal.writeNext(0);
-    leftSignal.writeNext(1);
-    leftSignal.writeNext(2);
-    leftSignal.writeNext(3);
-    leftSignal.writeNext(4);
-    leftSignal.writeNext(5);
-    leftSignal.writeNext(6);
-    leftSignal.writeNext(7);
-    leftSignal.writeNext(8);
-
-    rightSignal.writeNext(8);
-    rightSignal.writeNext(9);
-    rightSignal.writeNext(10);
-    rightSignal.writeNext(11);
-    rightSignal.writeNext(12);
-    rightSignal.writeNext(13);
-    rightSignal.writeNext(14);
-    rightSignal.writeNext(15);
-    rightSignal.writeNext(16);
+void fill(DirectionSensor& sensor) {
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
+    sensor.update(left++, left + delta);
 }
 
 int minElement(int elements[], int size) {

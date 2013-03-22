@@ -24,12 +24,12 @@ int CrossCorrelation::compute(
         int offset) {
     int correlationSum = 0;
 
-    int firstSignalIdx = firstSignal.size() - compareLength;
-    int secondSignalIdx = offset;
+    unsigned short firstSignalIdx = firstSignal.size() - compareLength;
+    unsigned short secondSignalIdx = offset;
 
     while (firstSignalIdx < firstSignal.size()) {
-        int firstVal = firstSignal.get(firstSignalIdx);
-        int secondVal = secondSignal.get(secondSignalIdx);
+        unsigned short firstVal = firstSignal.get(firstSignalIdx);
+        unsigned short secondVal = secondSignal.get(secondSignalIdx);
         correlationSum += abs(firstVal - secondVal);
         firstSignalIdx++;
         secondSignalIdx++;

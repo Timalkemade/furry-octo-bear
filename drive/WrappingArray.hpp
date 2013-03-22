@@ -10,19 +10,19 @@
 
 class WrappingArray {
 public:
-    WrappingArray();
+    WrappingArray(unsigned short pMaxSize);
     virtual ~WrappingArray();
 
-    unsigned int size();
-    void writeNext(int value);
-    int get(int index);
+    unsigned short size();
+    void writeNext(unsigned short value);
+    unsigned short get(unsigned short index);
     bool isFull();
 private:
 
-    unsigned int maxSize;
-    int values[100];
-    int nextValuePointer;
-    int arraySize;
+    unsigned short maxSize;
+    unsigned short values[1000];
+    unsigned short nextValuePointer;
+    unsigned short arraySize;
 
 };
 
