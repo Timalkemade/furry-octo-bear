@@ -10,11 +10,15 @@
 
 class Timer {
 public:
-    Timer(unsigned long duration);
+    Timer(unsigned long pDuration);
     virtual ~Timer();
-    
+
     bool hasEnded();
+
+    void reset();
 private:
+    unsigned long endTime;
+    unsigned long duration;
 
 };
 

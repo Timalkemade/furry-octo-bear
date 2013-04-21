@@ -8,3 +8,5 @@
 /drive1/build/Debug/
 .directory
 *~
+**/nbproject/
+**/out/

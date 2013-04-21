@@ -8,7 +8,7 @@
 #ifndef CROSSCORRELATION_H
 #define	CROSSCORRELATION_H
 
-#include "WrappingArray.hpp"
+#include "WrappingArray.h"
 
 class CrossCorrelation {
 public:

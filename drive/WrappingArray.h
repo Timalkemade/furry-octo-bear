@@ -20,7 +20,7 @@ public:
 private:
 
     unsigned short maxSize;
-    unsigned short values[1000];
+    unsigned short values[1024];
     unsigned short nextValuePointer;
     unsigned short arraySize;
 

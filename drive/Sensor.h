@@ -13,11 +13,11 @@
 
 class Sensor {
 public:
-    Sensor(Pin pinMapper);
-    Sensor();
+    Sensor(Pin aPin);
     int read();
     virtual ~Sensor();
 private:
+    Pin pin;
 
 };
 

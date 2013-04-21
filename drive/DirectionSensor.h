@@ -9,7 +9,7 @@
 #define	DIRECTIONSENSOR_H
 
 #include "Pin.h"
-#include "WrappingArray.hpp"
+#include "WrappingArray.h"
 #include "Sensor.h"
 #include "CrossCorrelation.h"
 

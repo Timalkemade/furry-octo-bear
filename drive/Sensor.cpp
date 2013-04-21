@@ -7,18 +7,15 @@
 
 #include "Sensor.h"
 
-Pin pinMapper;
+Pin pin;
 
-Sensor::Sensor(Pin aPinMapper) {
-    pinMapper = aPinMapper;
-}
-
-Sensor::Sensor() {
+Sensor::Sensor(Pin aPin) {
+    pin = aPin;
 }
 
 Sensor::~Sensor() {
 }
 
 int Sensor::read() {
-    return analogRead(pinMapper);
+    return analogRead(pin);
 }

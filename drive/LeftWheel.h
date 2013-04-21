@@ -4,12 +4,11 @@
 
 #include "Wheel.h"
 #include "WProgram.h"
-#include "Servo.h"
+#include <Servo.h> 
 #include "Pin.h"
 class LeftWheel : public Wheel { 
 
 public: 
-  LeftWheel();
   LeftWheel(Pin pinMapper, int aStopAngle);
   void setAngle(int anAngle);
   void maxForward();

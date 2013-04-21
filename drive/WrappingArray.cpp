@@ -5,7 +5,7 @@
  * Created on 4 augustus 2012, 13:02
  */
 
-#include "WrappingArray.hpp"
+#include "WrappingArray.h"
 
 WrappingArray::WrappingArray(unsigned short pMaxSize) {
     nextValuePointer = 0;

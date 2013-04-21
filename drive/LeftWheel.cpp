@@ -1,8 +1,5 @@
 #include "LeftWheel.h"
 
-LeftWheel::LeftWheel(){
-}
-
 LeftWheel::LeftWheel(Pin pinMapper, int aStopAngle) {
     wheelServo.attach(pinMapper);
     stopAngle = aStopAngle;

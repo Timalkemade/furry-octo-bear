@@ -7,7 +7,6 @@
 class RightWheel : public Wheel {
   
 public: 
-  RightWheel();
   RightWheel(Pin pinMapper, int aStopAngle);
   void maxForward();
   void maxBackward();

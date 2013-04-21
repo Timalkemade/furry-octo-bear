@@ -1,24 +1,21 @@
 #include "RightWheel.h"
 
-RightWheel::RightWheel() {
-
-}
-
-RightWheel::RightWheel(Pin pinMapper, int aStopAngle) {
-  RightWheel::opposite = LeftWheel(pinMapper, aStopAngle);
+RightWheel::RightWheel(Pin pin, int aStopAngle) : opposite(pin, aStopAngle) {
 }
 
 void RightWheel::maxForward() {
-  RightWheel::opposite.maxBackward();
+    RightWheel::opposite.maxBackward();
 }
+
 void RightWheel::maxBackward() {
-  RightWheel::opposite.maxForward();
+    RightWheel::opposite.maxForward();
 }
+
 void RightWheel::halt() {
-  RightWheel::opposite.halt();
+    RightWheel::opposite.halt();
 }
 
 void RightWheel::setAngle(int anAngle) {
-  RightWheel::opposite.setAngle(anAngle);
+    RightWheel::opposite.setAngle(anAngle);
 }
 

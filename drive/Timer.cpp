@@ -9,13 +9,16 @@
 
 #include <WProgram.h>
 
-unsigned long endTime;
-
-Timer::Timer(unsigned long duration) {
-    endTime = millis() + duration;
+Timer::Timer(unsigned long pDuration) {
+    duration = pDuration;
+    reset();
 }
 
 Timer::~Timer() {
+}
+
+void Timer::reset() {
+    endTime = millis() + duration;
 }
 
 bool Timer::hasEnded() {
